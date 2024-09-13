@@ -14,7 +14,7 @@
 3. Weak in Mobile Computing: Less commonly used for mobile app development compared to other languages.
 4. Global Interpreter Lock (GIL): Limits multi-threading performance, affecting parallel execution.
 ## Conclusion:
-#### Python is an excellent choice for programming due to its readability, versatility, and extensive libraries. It is particularly well-suited for beginners and for tasks in data science, web development, and automation. However, its performance limitations and memory consumption should be considered when working on performance-critical applications.<br> For most use cases, Python’s advantages outweigh its disadvantages, especially for rapid development and prototyping. Its strong community support and wide adoption make it a valuable language to learn and use in various domains.
+#### _Python is an excellent choice for programming due to its readability, versatility, and extensive libraries. It is particularly well-suited for beginners and for tasks in data science, web development, and automation. However, its performance limitations and memory consumption should be considered when working on performance-critical applications.<br> For most use cases, Python’s advantages outweigh its disadvantages, especially for rapid development and prototyping. Its strong community support and wide adoption make it a valuable language to learn and use in various domains._
 ### Code Example:
 
 ```python
