@@ -1,52 +1,53 @@
-def is_prime(num):
-    if num <= 1:
+def prime_check(n):
+    if n <= 1:
         return False
-    if num <= 3:
+    if n <= 3:
         return True
-    if num % 2 == 0 or num % 3 == 0:
+    if n % 2 == 0 or n % 3 == 0:
         return False
+
     i = 5
-    while i * i <= num:
-        if num % i == 0 or num % (i + 2) == 0:
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
             return False
-        i += 6
+        i += 1  
+
     return True
 
 def main():
+    user = input("Hello! What is your name? \n")
 
-    name = input("Hello! Please enter your name? \n")
-
-    numbers = []
-    for i in range(3):
+    fav_numbers = []
+    for n in range(3):
         while True:
             try:
-                number = int(input(f"Enter your favourite no. {i+1}: "))
-                numbers.append(number)
+                fav_number = int(input(f"Enter your favourite number {n+1}: "))
+                fav_numbers.append(fav_number)
                 break
             except ValueError:
-                print("Invalid input. Enter a valid integer.")
+                print("Invalid entry. Please provide a valid whole number.")
 
-    print(f"\nNice to meet you, {name}!")
+    print(f"\nPleasure meeting you, {user}!")
 
-    even_odd_info = [(num, "even" if num % 2 == 0 else "odd") for num in numbers]
+    parity_info = [(num, "even" if num % 2 == 0 else "odd") for num in fav_numbers]
 
-    print("\nHere are your favourite numbers with their even/odd decleration:")
-    for num, status in even_odd_info:
-        print(f"{num} is {status}.")
+    print("\nYour favourite numbers and their parity status:")
+    for num, parity in parity_info:
+        print(f"{num} is {parity}.")
 
-    squared_numbers = [(num, num**2) for num in numbers]
+    squared_values = [(num, num**2) for num in fav_numbers]
 
     print("\nHere are your favourite numbers and their squares:")
-    for num, square in squared_numbers:
-        print(f"The square of {num} is {square}.")
+    for num, square in squared_values:
+        print(f"{num} squared is {square}.")
 
-    total_sum = sum(numbers)
-    print(f"\nThe sum of your favourite numbers is {total_sum}.")
+    total = sum(fav_numbers)
+    print(f"\nThe sum of your favourite numbers is {total}.")
     
-    if is_prime(total_sum):
-        print("The sum is a prime number! It's awesome!")
+    if prime_check(total):
+        print("The sum of your favourite numbers is a prime number! Wow!")
     else:
-        print("The sum is not a prime number.")
+        print("The sum of your favourite numbers is not a prime number.")
 
 if __name__ == "__main__":
     main()
