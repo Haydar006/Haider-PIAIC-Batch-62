@@ -1,21 +1,21 @@
-def calculator(num1, num2, operation):
+def calculator(n1, n2, operation):
     if operation == '+':
-        return num1 + num2
+        return n1 + n2
     elif operation == '-':
-        return num1 - num2
+        return n1 - n2
     elif operation == '*':
-        return num1 * num2
+        return n1 * n2
     elif operation == '/':
-        if num2 != 0: 
-            return num1 / num2
+        if n2 != 0: 
+            return n1 / n2
         else:
-            return "Error: Division by zero is not allowed!"
+            return "Math Error"
     else:
-        return "Invalid operation selected."
+        return "Invalid operation"
 
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-operation = input("Enter the operation (+, -, *, /): ")
+n1 = float(input("Enter the first number: \n"))
+n2 = float(input("Enter the second number: \n"))
+operation = input("Enter the operation (+, -, *, /): \n")
 
-result = calculator(num1, num2, operation)
+result = calculator(n1, n2, operation)
 print("Result:", result)
