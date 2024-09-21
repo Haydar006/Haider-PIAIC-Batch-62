@@ -35,7 +35,7 @@ def main():
         result = calculator(n1, n2, operation)
         print("Result:", result)
 
-    except ValueError:
+    except:
         print("Invalid Number: Please enter a valid number.")
 
 main()
